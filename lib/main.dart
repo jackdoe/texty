@@ -122,7 +122,7 @@ Future<File> download(Uri url, String name) async {
   });
 }
 
-void main() => runApp(QrApp());
+void main() => runApp(TextyApp());
 
 class TextLine extends StatelessWidget {
   final String text;
@@ -176,26 +176,26 @@ class Error extends StatelessWidget {
   }
 }
 
-class QrApp extends StatelessWidget {
+class TextyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Unscramble Eggs',
-      home: new QrPage(),
+      title: 'Texy',
+      home: new TextyPage(),
     );
   }
 }
 
-class QrPage extends StatefulWidget {
-  QrPage({Key key, this.title}) : super(key: key);
+class TextyPage extends StatefulWidget {
+  TextyPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _QrPageState createState() => new _QrPageState();
+  _TextyPageState createState() => new _TextyPageState();
 }
 
-class _QrPageState extends State<QrPage> {
+class _TextyPageState extends State<TextyPage> {
   List<FileSystemEntity> downloaded;
 
   Future<List<FileSystemEntity>> listFiles() async {
